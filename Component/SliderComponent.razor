@@ -1,0 +1,75 @@
+﻿@inject IJSRuntime jsRuntime
+
+<div class="slider index-2">
+       <div class="owl-main owl-carousel owl-theme">
+          <div class="item"> 
+                    <img class="d-block w-100" src="img/slide1.jpg" alt="First slide">
+                    <div class="caption d-md-block">
+                    
+                    <div class="display">Think Big <br/> Do Creative <br/> Grow Business <br/> Consult Pierolo Limited </div>
+                    
+                    <a href="about-us-2.html" class="view_more" title="View More">View More</a> 
+                    <a href="contact-us-1.html" class="view_more contact_us" title="Contact Us">Contact Us</a>
+            </div>  
+            </div>
+                <div class="item"> 
+                    <img class="d-block w-100" src="img/slide-2.jpg" alt="Second slide">
+                    <div class="caption d-md-block">
+                    <div class="display">Effective business <br/> delivery solutions <br/> at a glance </div>
+                    <div class="content">...</div>
+                    <a href="about-us-2.html" class="view_more" title="View More">View More</a> 
+                    <a href="contact-us-1.html" class="view_more contact_us" title="Contact Us">Contact Us</a>
+                    </div>     
+                </div>
+             <div class="item"> 
+                    <img class="d-block w-100" src="img/slide-3.jpg" alt="Third slide">
+                    <div class="caption d-md-block">
+                    <div class="display">We Are<br/>Your Digital <br/> Partners </div>
+                    <div class="content"><div class=""></div>.</div>
+                    <a href="about-us-2.html" class="view_more" title="View More">View More</a> 
+                    <a href="contact-us-1.html" class="view_more contact_us" title="Contact Us">Contact Us</a>
+                    </div>    
+            </div>
+                    <div class="item"> 
+                    <img class="d-block w-100" src="img/slide-4.jpg" alt="Fourth slide">
+                    <div class="caption d-md-block">
+                    <div class="display">We Are Bizler<br/>We Make<br/>Brands Shine </div>
+                    <div class="content">...</div>
+                    <a href="about-us-2.html" class="view_more" title="View More">View More</a> 
+                    <a href="contact-us-1.html" class="view_more contact_us" title="Contact Us">Contact Us</a>
+                    </div>    
+            </div>
+        </div>
+  </div>
+
+@code {
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        jsRuntime.InvokeVoidAsync("startSlider");
+    }
+
+}
+
+<style>
+     .owl-main .item::after{
+     content:'';
+     background: -moz-linear-gradient(top, rgba(12, 11, 54, 0.5) 0%, rgba(12, 11, 54, 0.5) 100%);
+     background: -webkit-linear-gradient(top, rrgba(12, 11, 54, 0.5) 0%,rgba(12, 11, 54, 0.5) 100%);
+     background: linear-gradient(to bottom, rgba(12, 11, 54, 0.5) 0%,rgba(12, 11, 54, 0.5) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff6205', endColorstr='#804b55dc',GradientType=0 );
+     height:100vh;
+     width:100%;
+     z-index:1;
+     position: absolute;
+     top:0;
+}
+
+.owl-main .caption .display {
+    font-size: 55px;
+    line-height: 55px;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+</style>

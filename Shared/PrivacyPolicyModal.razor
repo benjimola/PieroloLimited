@@ -1,0 +1,30 @@
+<MudDialog>
+    <DialogContent>
+        <MudText Style="white-space: pre-wrap;">
+          
+              The Internet is an amazing tool. It has the power to change the way we live, and we're starting to see that 
+              potential today. With only a few mouse-clicks, you can follow the news, look up facts, buy goods and 
+              services, and communicate with others from around the world. It's important to Pierolo Limited to help our 
+              customers retain their privacy when they take advantage of all the Internet has to offer.   
+              
+              We believe your business is no one else's. Your privacy is important to you…and to us. So we'll protect the 
+              information you share with us. To protect your privacy, Pierolo Limited follows different principles in 
+              accordance with world-wide practices for customer privacy and data protection  
+
+                  We won’t sell or give away your name, mail address, phone number, email address, credit card 
+                  number or any other information to anyone.
+
+                  We’ll use state-of-the-art security measures to protect your information from unauthorized users.
+                  
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

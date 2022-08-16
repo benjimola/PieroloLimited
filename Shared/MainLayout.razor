@@ -1,0 +1,18 @@
+﻿@using Pierolo.com.Component
+@inherits LayoutComponentBase
+
+<MudThemeProvider/>
+<MudDialogProvider FullWidth="true"
+    MaxWidth="MaxWidth.Medium" />
+<MudSnackbarProvider/>
+
+<PageTitle>Pierolo.com</PageTitle>
+
+<div class="wraper">
+    <TopHeaderComponent/>
+    <NavMenuComponent/>
+            @Body
+<PrivacyPolicyModal/>
+</div>
+ 
+   <Footer/>

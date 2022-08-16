@@ -1,0 +1,168 @@
+﻿@inject IDialogService DialogService
+
+
+<footer class="home index-2">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="row row-safari">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="section_heading">
+            <h2>Contact Info</h2>
+              <div class="separator left-align">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+          </div>
+          <div class="contact_info">
+             <ul>
+               <li>
+                 <div class="icon">
+                   <i class="flat flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
+                 </div>
+                 <div class="detail">
+                   <h5>Address</h5>
+                   <div class="content">
+                       Bayelsa Mailing Address : <span class="value"><br/>
+                       No. 16, Model Primary School Road, 
+                        <br/>Opposite Magistrate Court, Kaiama Town,
+                        <br/>Bayelsa State <br/>560101</span>
+                   </div>
+                   <div class="content">
+                       US Mailing Address : <span class="value"><br/>
+                       2803 Philadelphia  <br/> Pike
+                        Ste B <br/>
+                        PMB 607 <br/>
+                        Claymont, <br/> DE 19703
+                        </span>
+                   </div>
+                 </div>
+               </li>
+               <li>
+                 <div class="icon">
+                   <i class="flat flaticon-phone-receiver"></i>
+                 </div>
+                 <div class="detail">
+                   <h5>Call Us On</h5>
+                   <div class="content">
+                      Bayelsa Office : <span class="value"> +234-(90)-135-70491 </span> <br /> 
+                      Claymont Office : <span class="value"> +1-(302)-703-7488  </span>
+                   </div>
+                 </div>
+               </li>
+               <li>
+                 <div class="icon">
+                   <i class="flat flaticon-mail-black-envelope-symbol"></i>
+                 </div>
+                  <div class="detail">
+                   <h5>Mail Us On</h5>
+                   <div class="content">
+                      Customer Support : <span class="value"><a href="javascript:void(0)" title="info@pierolo.com"> info@pierolo.com</a></span><br />
+                      Technical Support : <span class="value"><a href="javascript:void(0)" title="customer@pierolo.com"> customer@pierolo.com</a></span>
+                   </div>
+                 </div>
+               </li>
+               <li>
+                 <div class="icon">
+                   <i class="flat flaticon-share"></i>
+                 </div>
+                 <div class="detail">
+                   <h5>Follow Us On</h5>
+                   <div class="content">
+                      <a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a>
+                      <a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a>
+                      <a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a>
+                      <a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a>
+                      <a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a>
+                   </div>
+                 </div>
+               </li>
+             </ul>    
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+           <div class="section_heading">
+            <h2>Contact Form</h2>
+              <div class="separator left-align">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+          </div>
+           <div class="contact-form">
+              <form action="">
+              <div class="form-group">
+              <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+              <input type="text" placeholder="Email" />
+              </div>
+              <div class="form-group">
+              <input type="text" placeholder="Subject" />
+              </div>
+              <div class="form-group">
+              <textarea placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+              <button type="submit">Submit</button>
+              </div>
+              </form>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="bottom">
+    <div class="container">
+      <div class="navigation">
+         <ul>
+          <li><a href="" title="Homepage">Home</a></li>
+          <li class="separator-pipesign white"></li>
+          <li><a href="/about-us" title="About Us">About Us</a></li>
+          <li class="separator-pipesign white"></li>
+          <li><a href="/services" title="Services">Services</a></li>
+          <li class="separator-pipesign white"></li>
+          <li><a href="/blogs" title="Blogs">Blogs</a></li>
+          <li class="separator-pipesign white"></li>
+          <li><a href="/store" title="Pages">Store</a></li>
+          <li class="separator-pipesign white"></li>
+          <li><a href="/contact" title="Contact Us">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 copyright">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> Copyright &copy; 2022
+            <span class="separator-pipesign white"></span>
+            All Rights Reserved
+            <span class="separator-pipesign white"></span>
+            <a href="https://www.pierolo.com">Pierolo Limited</a></div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right"> <MudButton Variant="Variant.Text" Color="Color.Inherit"  @onclick="OpenDialog">Privacy Policy</MudButton>
+           
+            <a href="javascript:void(0)"></a>
+            <span class="separator-pipesign white"></span>
+            <a href="faq.html">FAQ's</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+@code {
+
+    private void OpenDialog()
+    {
+      
+		var options = new DialogOptions { CloseOnEscapeKey = true };
+    DialogOptions maxWidth = new DialogOptions() { MaxWidth = MaxWidth.Large, FullWidth = true };
+        DialogService.Show<PrivacyPolicyModal>("Privacy Policy", options);
+    }
+}
