@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Pierolo.com.Data;
 using MudBlazor.Services;
+using Pierolo.com.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
+builder.Services.AddScoped<IBlogService, BlogServiceRepository>();
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();
